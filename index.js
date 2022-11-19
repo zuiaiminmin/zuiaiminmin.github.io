@@ -12,7 +12,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('|#countdown 3||闵闵|祝你|生日|快乐|❤|永远|');
+      S.UI.simulate('|#countdown 3||闵闵|祝你|生日|快乐|❤|永远|爱你|(づ￣3￣)づ|愿你|永远|开心|快乐|');
     }
 
     S.Drawing.loop(function () {
@@ -194,7 +194,7 @@ S.UI = (function () {
         default:
           S.Shape.switchShape(S.ShapeBuilder.letter(current[0] === cmd ? 'What?' : current));
       }
-    }, 3500, sequence.length);
+    }, 4000, sequence.length);
   }
 
   function checkInputWidth(e) {
