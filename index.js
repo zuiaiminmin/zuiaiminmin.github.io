@@ -10,9 +10,9 @@ var S = {
     document.body.classList.add('body--ready');
 
     if (i !== -1) {
-      S.UI.simulate(decodeURI(action).substring(i + 3));
+      S.UI.simulate(decodeURI(action).substring(i + 9));
     } else {
-      S.UI.simulate('|#countdown 3||闵闵|祝你|生日|快乐|❤|永远|爱你|(づ￣3￣)づ|愿你|永远|开心|快乐|');
+      S.UI.simulate('|#countdown 9|闵闵|祝你|生日|快乐|❤|永远|爱你|(づ￣3￣)づ|一岁|一礼|一寸|欢喜|愿|我的|公主|永远|开心|快乐|别怕|光阴|漫长|我|都会|在你|身旁|');
     }
 
     S.Drawing.loop(function () {
@@ -159,7 +159,7 @@ S.UI = (function () {
             } else {
               S.Shape.switchShape(S.ShapeBuilder.letter(index), true);
             }
-          }, 1000, value, true);
+          }, 3000, value, true);
           break;
 
         case 'rectangle':
@@ -194,7 +194,7 @@ S.UI = (function () {
         default:
           S.Shape.switchShape(S.ShapeBuilder.letter(current[0] === cmd ? 'What?' : current));
       }
-    }, 4000, sequence.length);
+    }, 3700, sequence.length);
   }
 
   function checkInputWidth(e) {
@@ -703,3 +703,4 @@ S.Shape = (function () {
 
 
 S.init();
+
